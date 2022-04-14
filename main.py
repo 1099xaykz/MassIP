@@ -39,6 +39,7 @@ def main():
 				print("ISP:", data['isp'])
 				print("Organizacion:", data['org'])
 				print("Pais:", data['country'])
+				print("Nombre de la region:", data['regionName'])
 				print("Ciudad:", data['city'])
 				print("Region:", data['region'])
 				print("Longitude:", data['lon'])
