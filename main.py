@@ -26,6 +26,7 @@ def banner():
 	print()
 
 def main():
+	banner()
 	file = input(RED + "Archivo de direcciones IP" + WHITE + " > ")
 	archivo = open(file, "r")
 	for line in archivo:
@@ -33,7 +34,7 @@ def main():
 		try:
 				print("----------------------------------------------------------------")
 				print()
-				data = requests.get(api+line).json()
+				data = requests.get(api+line.strip()).json()
 				print("IP:", data['query'])
 				print("ISP:", data['isp'])
 				print("Organizacion:", data['org'])
